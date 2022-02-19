@@ -26,12 +26,12 @@ fun StopWatchDisplay(
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ){
-
+        Spacer(Modifier.height(60.dp))
         Text(
             text = "Stop Watch",
             fontSize = 40.sp,
             color = Color.Black,
-            fontStyle = FontStyle.Italic
+            fontStyle = FontStyle.Italic,
         )
         Spacer(Modifier.height(160.dp))
         Text(

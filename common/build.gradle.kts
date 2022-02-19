@@ -62,4 +62,5 @@ android {
 
 dependencies {
     implementation("androidx.navigation:navigation-compose:2.4.1")
+    implementation("androidx.navigation:navigation-runtime:2.4.1")
 }
