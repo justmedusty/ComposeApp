@@ -1,4 +1,4 @@
-package me.dusty.android.ui.theme
+package me.dusty.android.ui.theme.pages
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -35,7 +35,6 @@ fun HomeScreen(
             fontWeight = FontWeight.Bold,
 
             )
-        Spacer(Modifier.height(150.dp))
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -50,7 +49,7 @@ fun HomeScreen(
                 ImageCard(
                     painter = painterResource(id = me.dusty.android.R.drawable.kermit),
                     contentDescription = "Kermit being kermit",
-                    title = "Kermit",
+                    title = "",
                     modifier = Modifier
                         .size(
                             width = 150.dp,
@@ -61,10 +60,11 @@ fun HomeScreen(
                         }
 
                 )
+                Spacer(Modifier.width(10.dp))
                 ImageCard(
                     painter = painterResource(id = me.dusty.android.R.drawable.watch),
                     contentDescription = "Kermit",
-                    title = "Stopwatch",
+                    title = "",
                     modifier = Modifier
                         .size(
                             width = 150.dp,
@@ -81,6 +81,54 @@ fun HomeScreen(
             }
 
 
+        }
+    }
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.BottomCenter
+    )
+
+    {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+        ) {
+            Spacer(Modifier.height(235.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxSize(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                ImageCard(
+                    painter = painterResource(id = me.dusty.android.R.drawable.notepad),
+                    contentDescription = "",
+                    title = "",
+                    modifier = Modifier
+                        .size(
+                            width = 150.dp,
+                            height = 150.dp
+                        )
+                        .clickable {
+                            navController.navigate(route = Screen.KermitPage.route)
+                        }
+
+                )
+                Spacer(Modifier.width(10.dp))
+                ImageCard(
+                    painter = painterResource(id = me.dusty.android.R.drawable.camera),
+                    contentDescription = "",
+                    title = "",
+                    modifier = Modifier
+                        .size(
+                            width = 150.dp,
+                            height = 150.dp
+                        )
+                        .clickable {
+                            navController.navigate(route = Screen.KermitPage.route)
+                        }
+
+                )
+            }
         }
     }
 }

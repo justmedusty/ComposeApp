@@ -52,7 +52,6 @@ fun StopWatchScreen(
         Button(
             onClick = { navController.navigate(Screen.Home.route) },
             modifier = Modifier
-                .fillMaxWidth()
         )
 
         {
