@@ -16,10 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-
                 navController = rememberNavController()
                 setupNavGraph(navController)
-
             }
         }
     }

@@ -19,8 +19,14 @@ kotlin {
     jvm("desktop") {
         compilations.all {
             kotlinOptions.jvmTarget = "11"
+            kotlinOptions {
+                //Support @JvmDefault
+                freeCompilerArgs = listOf("-Xjvm-default=enable")
+                jvmTarget = "11"
+            }
         }
     }
+
     sourceSets {
         val commonMain by getting {
             dependencies {
