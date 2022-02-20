@@ -23,17 +23,9 @@ fun StopWatchDisplay(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.Top,
+        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ){
-        Spacer(Modifier.height(60.dp))
-        Text(
-            text = "Stop Watch",
-            fontSize = 40.sp,
-            color = Color.Black,
-            fontStyle = FontStyle.Italic,
-        )
-        Spacer(Modifier.height(160.dp))
         Text(
             text = formattedTime,
             fontSize = 60.sp,
@@ -58,6 +50,8 @@ fun StopWatchDisplay(
                 Text("Reset")
 
             }
+
+
         }
     }
 }
