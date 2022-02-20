@@ -14,6 +14,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -52,10 +55,10 @@ fun ImageCard(
             Box(
                 modifier = Modifier
                     .fillMaxSize().padding(12.dp),
-                contentAlignment = Alignment.BottomStart,
+                contentAlignment = Alignment.BottomCenter,
 
                 ) {
-                Text(title, style = TextStyle(color = Color.White, fontSize = 16.sp))
+                Text(title, style = TextStyle(color = Color.Black, fontSize = 16.sp, textAlign = TextAlign.Center,fontFamily = FontFamily.Monospace))
             }
         }
     }

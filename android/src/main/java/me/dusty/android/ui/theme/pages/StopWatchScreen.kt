@@ -14,7 +14,7 @@ import androidx.navigation.NavController
 import me.dusty.android.navigation.Screen
 
 @Composable
-fun DetailScreen(
+fun StopWatchScreen(
     navController: NavController
 ) {
     Box(

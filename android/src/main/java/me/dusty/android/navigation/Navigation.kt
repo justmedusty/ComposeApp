@@ -5,7 +5,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import me.dusty.android.ui.theme.HomeScreen
-import me.dusty.common.DetailScreen
+import me.dusty.android.ui.theme.pages.KermitPage
+import me.dusty.common.StopWatchScreen
 
 @Composable
 fun setupNavGraph(navHostController: NavHostController) {
@@ -19,9 +20,14 @@ fun setupNavGraph(navHostController: NavHostController) {
             HomeScreen(navController = navHostController)
         }
         composable(
-            route = Screen.Detail.route
+            route = Screen.StopwatchScreen.route
         ) {
-            DetailScreen(navController = navHostController)
+            StopWatchScreen(navController = navHostController)
+        }
+        composable(
+            route = Screen.KermitPage.route
+        ){
+            KermitPage(navController = navHostController)
         }
 
     }

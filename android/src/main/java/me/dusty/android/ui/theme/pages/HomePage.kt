@@ -1,20 +1,18 @@
 package me.dusty.android.ui.theme
 
-import androidx.camera.core.Preview
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
+import me.dusty.android.imageCardBuilder.ImageCard
 import me.dusty.android.navigation.Screen
 
 @Composable
@@ -25,17 +23,62 @@ fun HomeScreen(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.TopCenter
 
-        ) {
+    ) {
         Text(
-            text = "home",
+            text = "Home",
             color = MaterialTheme.colors.primary,
             fontSize = MaterialTheme.typography.h3.fontSize,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.clickable {
-                navController.navigate(route = Screen.Detail.route)
+
+
+            )
+        Spacer(Modifier.height(150.dp))
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+        ) {
+            Spacer(Modifier.height(75.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxSize(1f),
+                horizontalArrangement = Arrangement.Center
+
+            ) {
+                ImageCard(
+                    painter = painterResource(id = me.dusty.android.R.drawable.kermit),
+                    contentDescription = "Kermit being kermit",
+                    title = "Kermit",
+                    modifier = Modifier
+                        .size(
+                            width = 150.dp,
+                            height = 150.dp
+                        )
+                        .clickable {
+                            navController.navigate(route = Screen.KermitPage.route)
+                        }
+
+                )
+                ImageCard(
+                    painter = painterResource(id = me.dusty.android.R.drawable.watch),
+                    contentDescription = "Kermit",
+                    title = "Stopwatch",
+                    modifier = Modifier
+                        .size(
+                            width = 150.dp,
+                            height = 150.dp
+                        )
+
+                        .clickable {
+                            navController.navigate(route = Screen.StopwatchScreen.route)
+
+                        }
+                )
+
+
             }
+            Spacer(Modifier.height(10.dp))
 
-        )
+
+        }
     }
-
 }

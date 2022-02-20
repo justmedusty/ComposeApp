@@ -37,7 +37,7 @@ fun StopWatchDisplay(
         Text(
             text = formattedTime,
             fontSize = 60.sp,
-            color = Color.Black
+            color = Color.Black,
 
         )
         Spacer(Modifier.height(16.dp))
